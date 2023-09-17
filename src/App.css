@@ -1,0 +1,85 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f1f1f1;
+}
+
+button{
+  margin-top: 20px;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  background-color: #161616;
+  color: orange;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button.clicked{
+  font-weight: 700;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+img{
+  width: 140px;
+  height: 140px;
+  border-radius: 5px;
+}
+
+.card {
+  background-color: transparent;
+  width: 140px;
+  height: 140px;
+  perspective: 1000px;
+  border-radius: 5px;
+}
+
+.inner.flipped{
+  transform: rotateY(180deg);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 #262525;
+}
+
+.front, .cover {
+  position: absolute;
+  left: 0;
+  width: 140px;
+  height: 140px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px 0 #262525;
+
+}
+
+.front {
+  background-color: #000;
+}
+
+.front {
+  transform: rotateY(180deg);
+}
