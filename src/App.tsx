@@ -55,13 +55,14 @@ function App() {
     shuffleCards()
   }, [])
 
-  //Handle Choices when Clicking on Cards
+//Handle Choices when Clicking on Cards
 
 function handleChoice(card:{src:string, id:number, matched: boolean}){
 
   firstChoice ? setSecondChoice(card) : setFirstChoice(card)
 }
 
+// matching logic of the cards
 
 function handleMatch () {
   if((firstChoice && secondChoice) && (firstChoice.id !== secondChoice.id)) {
@@ -89,6 +90,7 @@ function handleMatch () {
   }
 }
 
+//reset choices to null
 function resetTurn() {
   setFirstChoice(null)
   setSecondChoice(null)
