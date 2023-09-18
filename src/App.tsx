@@ -2,7 +2,16 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
 
-
+const cardImgs = [
+  {src: 'src/assets/html.svg', matched: false},
+  {src: './assets/css.svg', matched: false},
+  {src: '../assets/javascript.svg', matched: false},
+  {src: 'assets/react.svg', matched: false},
+  {src: '/assets/sass.svg', matched: false},
+  {src: 'src/assets/bootstrap.svg', matched: false},
+  {src: '/assets/typescript.svg', matched: false},
+  {src: '/assets/redux.svg', matched: false}
+]
 
 type CardProps ={
   src: string
@@ -11,16 +20,6 @@ type CardProps ={
 }
 
 function App() {
-  const cardImgs = [
-    {src: 'src/assets/html.svg', matched: false},
-    {src: './assets/css.svg', matched: false},
-    {src: '../assets/javascript.svg', matched: false},
-    {src: 'assets/react.svg', matched: false},
-    {src: '/assets/sass.svg', matched: false},
-    {src: 'src/assets/bootstrap.svg', matched: false},
-    {src: '/assets/typescript.svg', matched: false},
-    {src: '/assets/redux.svg', matched: false}
-  ]
 
   const [cards, setCards] = useState<CardProps[]>([])
   const [turns, setTurns] = useState(0)
@@ -43,11 +42,7 @@ function App() {
     setSecondChoice(null)
     setTurns(0)
 
-    // button click design
-    handleButton.current?.classList.add('clicked')
-    setTimeout(() => {
-      handleButton.current?.classList.remove('clicked')
-    }, 100)
+
 
   }
 
