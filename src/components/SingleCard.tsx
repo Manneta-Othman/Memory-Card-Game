@@ -8,7 +8,7 @@ type CardProps = {
     disabled: boolean
 }
 
-export default function SingleProps({card, handleChoice, flipped, disabled}:CardProps) {
+export default function SingleProps({card, handleChoice, disabled}:CardProps) {
 
     function handleClick() {
 
