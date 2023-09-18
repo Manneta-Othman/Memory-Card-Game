@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
 
@@ -27,6 +27,7 @@ function App() {
   const [firstChoice, setFirstChoice] = useState<CardProps | null>(null)
   const [secondChoice, setSecondChoice] = useState<CardProps | null>(null)
   const [disabled, setDisabled] = useState(false)
+  const handleButton = useRef<HTMLButtonElement>(null)
 
   
 
@@ -40,6 +41,13 @@ function App() {
     setFirstChoice(null)
     setSecondChoice(null)
     setTurns(0)
+
+    // button click design
+    handleButton.current?.classList.add('clicked')
+    setTimeout(() => {
+      handleButton.current?.classList.remove('clicked')
+    }, 100)
+
   }
 
 
@@ -98,7 +106,7 @@ useEffect(() => {
     <>
       <div className="App">
         <h1>Matching Cards Game</h1>
-        <button onClick={shuffleCards} >Start The Game</button>
+        <button onClick={shuffleCards} ref={handleButton}>Start The Game</button>
 
         <div className="container">
           {cards.map(card => (

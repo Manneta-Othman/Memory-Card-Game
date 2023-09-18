@@ -1,5 +1,5 @@
 
-import cover from '../assets/Manneta-logo.png'
+import cover from '../../public/assets/Manneta-logo.png'
 
 type CardProps = {
     card: {src:string, id:number, matched: boolean}
@@ -8,7 +8,7 @@ type CardProps = {
     disabled: boolean
 }
 
-export default function SingleProps({card, handleChoice, disabled}:CardProps) {
+export default function SingleProps({card, handleChoice, flipped, disabled}:CardProps) {
 
     function handleClick() {
 
@@ -17,7 +17,7 @@ export default function SingleProps({card, handleChoice, disabled}:CardProps) {
 
   return (
     <div className="card">
-        <div className='inner flipped'>
+        <div className={flipped ? 'inner flipped' : 'inner'}>
             <img src={card.src} alt="front card" className='front' />
             <img src={cover} alt="back card" className='cover' onClick={handleClick} />
         </div>
