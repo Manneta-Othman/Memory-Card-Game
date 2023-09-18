@@ -4,11 +4,11 @@ import SingleCard from './components/SingleCard'
 
 const cardImgs = [
   {src: 'https://manneta-matching-cards.netlify.app/assets/html.svg', matched: false},
-  {src: 'https://manneta-matching-cards.netlify.app/assets/css.svg', matched: false},
-  {src: '/assets/javascript.svg', matched: false},
-  {src: '/assets/react.svg', matched: false},
-  {src: '/assets/sass.svg', matched: false},
-  {src: '/assets/bootstrap.svg', matched: false},
+  {src: 'manneta-matching-cards.netlify.app/assets/css.svg', matched: false},
+  {src: './assets/javascript.svg', matched: false},
+  {src: '../assets/react.svg', matched: false},
+  {src: 'assets/sass.svg', matched: false},
+  {src: '../../assets/bootstrap.svg', matched: false},
   {src: '/assets/typescript.svg', matched: false},
   {src: '/assets/redux.svg', matched: false}
 ]
