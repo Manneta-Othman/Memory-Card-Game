@@ -3,12 +3,12 @@ import './App.css'
 import SingleCard from './components/SingleCard'
 
 const cardImgs = [
-  {'src': 'src/assets/html.svg', matched: false},
-  {'src': './assets/css.svg', matched: false},
-  {'src': '../assets/javascript.svg', matched: false},
+  {'src': 'assets/html.svg', matched: false},
+  {'src': 'assets/css.svg', matched: false},
+  {'src': 'assets/javascript.svg', matched: false},
   {'src': 'assets/react.svg', matched: false},
-  {'src': '/assets/sass.svg', matched: false},
-  {'src': 'src/assets/bootstrap.svg', matched: false},
+  {'src': 'assets/sass.svg', matched: false},
+  {'src': 'assets/bootstrap.svg', matched: false},
   {'src': 'assets/typescript.svg', matched: false},
   {'src': 'assets/redux.svg', matched: false}
 ]
