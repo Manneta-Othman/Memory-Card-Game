@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
 
@@ -9,8 +9,8 @@ const cardImgs = [
   {src: 'assets/react.svg', matched: false},
   {src: '/assets/sass.svg', matched: false},
   {src: 'src/assets/bootstrap.svg', matched: false},
-  {src: '/assets/typescript.svg', matched: false},
-  {src: '/assets/redux.svg', matched: false}
+  {src: 'assets/typescript.svg', matched: false},
+  {src: 'assets/redux.svg', matched: false}
 ]
 
 type CardProps ={
@@ -27,7 +27,6 @@ function App() {
   const [firstChoice, setFirstChoice] = useState<CardProps | null>(null)
   const [secondChoice, setSecondChoice] = useState<CardProps | null>(null)
   const [disabled, setDisabled] = useState(false)
-  const handleButton = useRef<HTMLButtonElement>(null)
 
   
 
@@ -41,9 +40,6 @@ function App() {
     setFirstChoice(null)
     setSecondChoice(null)
     setTurns(0)
-
-
-
   }
 
 
@@ -102,7 +98,7 @@ useEffect(() => {
     <>
       <div className="App">
         <h1>Matching Cards Game</h1>
-        <button onClick={shuffleCards} ref={handleButton}>Start The Game</button>
+        <button onClick={shuffleCards} >Start The Game</button>
 
         <div className="container">
           {cards.map(card => (
