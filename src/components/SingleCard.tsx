@@ -17,7 +17,7 @@ export default function SingleProps({card, handleChoice, flipped, disabled}:Card
 
   return (
     <div className="card">
-        <div className={flipped ? 'inner flipped' : 'inner'}>
+        <div className='inner flipped'>
             <img src={card.src} alt="front card" className='front' />
             <img src={cover} alt="back card" className='cover' onClick={handleClick} />
         </div>
